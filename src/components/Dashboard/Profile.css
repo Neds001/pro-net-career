@@ -118,5 +118,24 @@
     margin-right: 10px;
 }
 
+@media only screen and (max-width: 1024px){
+    .profileContainer{
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+    .sideSection{
+        flex: .2;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .profileContainer{
+        flex-direction: column;
+    }
+
+    .sideSection{
+        margin: 20px auto;
+    }
+}
 
 

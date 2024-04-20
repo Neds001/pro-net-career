@@ -65,7 +65,12 @@
     object-fit: cover;
 }
 
-
+@media only screen and (max-width: 480px){
+    .networksHeader{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}
 
 
 

@@ -43,15 +43,21 @@ function DashboardHeader() {
                 <Link to="/dashboard" className='homeColor'>
                     <HomeIcon fontSize='large' className='home' onClick={scrollToTop} />
                 </Link>
-                <PeopleAltIcon fontSize='large' />
-                <BusinessCenterIcon fontSize='large' />
+                {/* to='/findNetworks' */}
+                <Link className='linkNetwork' >
+                    <PeopleAltIcon fontSize='large' />
+                </Link>
+                {/* to='/findJobs' */}
+                <Link className='linkNetwork' >
+                <BusinessCenterIcon fontSize='large' className='linkJobs' />
+                </Link>
             </div>
             <div id="rightContainer" className={isNavOpen ? '' : 'active'}>
-                <EmailIcon fontSize='large' />
+                <EmailIcon fontSize='large' className='linkMessage' />
                 <p>Email</p>
-                <NotificationsActiveIcon fontSize='large' />
+                <NotificationsActiveIcon fontSize='large' className='linkNotif' />
                 <p>Notifications</p>
-                <Link to='/profile'>
+                <Link to='/profile' className='linkProfile'>
                     <PersonIcon fontSize='large' />
                 </Link>
                 <p>Profile</p>

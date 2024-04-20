@@ -112,4 +112,23 @@
 }
 
 
+@media only screen and (max-width: 1024px) {
+    .groupsContainer{
+        justify-content: space-evenly;
+    }
+
+    .rightSection{
+        flex: .3;
+    }
+    .leftSection{
+        flex: .7
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .groupsContainer{
+        flex-direction: column;
+    }
+}
+
 

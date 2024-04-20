@@ -64,6 +64,11 @@
     display: none;
 }
 
+.linkProfile, .linkNotif, .linkMessage, .linkJobs, .linkNetwork{
+    color: black;
+}
+
+
 #rightContainer>p {
     display: none;
 }
