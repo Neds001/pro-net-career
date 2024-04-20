@@ -1,2 +1,2 @@
 # pro-net-career
- A reinvented front-end of linkedin website
+Professional Network Career (pro-net-career) is a reinvented front-end design of a well know website called LinkedIn
