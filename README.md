@@ -12,4 +12,4 @@ Professional Network Career (pro-net-career) is a reinvented front-end design of
 - To see your local-storage, go to the website, ` click f12 or rightclick`  your mouse and go to inspect look for applications and you can see your localstorage there
 - Once you are on the dashboard you can post contents, react comment etc.
 
-***This website was developed by Neds Mamitag as capstone for Village 88, Inc Philippines.***
+***This website was developed by Neds Mamitag in a span of a week as a capstone project for Village 88, Inc Philippines.***
