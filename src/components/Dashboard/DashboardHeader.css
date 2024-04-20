@@ -1,0 +1,159 @@
+.headerContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    height: 70px;
+    z-index: 1000;
+}
+
+.leftContainer {
+    flex: .2;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.inputContainer {
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 20px;
+    margin-left: 5px;
+    display: flex;
+}
+
+.inputContainer>input {
+    border: none;
+    outline-width: 0;
+}
+
+.leftContainerLogo {
+    margin-left: 10px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.middleContainer {
+    flex: .6;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#rightContainer {
+    flex: .2;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#rightContainer.active {
+    left: 0;
+}
+
+.navbar {
+    display: none;
+}
+
+#rightContainer>p {
+    display: none;
+}
+
+.homeColor{
+    color: black;
+}
+
+@media only screen and (max-width: 1024px) {
+    .leftContainer {
+        flex: .1;
+    }
+
+    .middleContainer {
+        flex: .5;
+    }
+
+    #rightContainer {
+        flex: .4;
+        justify-content: space-around;
+        border-left: 2px solid gray;
+        height: 30px;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .middleContainer {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    #rightContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: fixed;
+        top: 70px;
+        margin-left: 780px;
+        left: -250px;
+        width: 250px;
+        height: 70vh;
+        border-right: 1px solid white;
+        padding: 20px 0 0 10px;
+        gap: 20px;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.726);
+        background-color: rgba(255, 255, 255, 0.514);
+        backdrop-filter: blur(3px);
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        border-bottom: 2px solid gray;
+    }
+
+    #rightContainer.active {
+        opacity: 1;
+        left: 0;
+    }
+
+    .navbar {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    #rightContainer>p {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .leftContainer {
+        flex: 1;
+    }
+
+    .headerContainer>.middleContainer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        flex: 1;
+        background-color: white;
+        border-top: 2px solid gray;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    #rightContainer {
+        margin-left: 480px;
+    }
+
+    .inputContainer {
+        width: 100%;
+    }
+}

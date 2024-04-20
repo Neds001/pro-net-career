@@ -1,0 +1,68 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footerContainer {
+    display: flex;
+    padding: 20px;
+    gap: 50px;
+    -webkit-animation: footerContainer 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: footerContainer 0.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes footerContainer {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+@keyframes footerContainer {
+    0% {
+        letter-spacing: 1em;
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
+.about,
+.careers,
+.policy {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.about {
+    width: 120px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .about,
+    .careers,
+    .policy {
+        font-size: 18px;
+    }
+}

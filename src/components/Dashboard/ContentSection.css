@@ -1,0 +1,271 @@
+.contentContainer {
+    margin-top: 60px;
+    flex: .6;
+    height: 100vh auto;
+}
+
+.container {
+    margin-top: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+}
+
+.wrapper {
+    margin: 0 30px;
+}
+
+.createIcon {
+    padding: 3px;
+    margin-left: 5px;
+}
+
+.postForm {
+    display: flex;
+    border: 1px solid gray;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.postForm>input {
+    border: none;
+    outline-width: 0;
+    flex: 1;
+    padding: 10px;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+.postForm>button {
+    display: none;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.actionItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actionItem>p {
+    margin: 5px;
+    text-align: center;
+}
+
+.actionItem>button {
+    background-color: white;
+    border: none;
+}
+
+.actionItem>button:hover {
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.postHeader {
+    display: flex;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 5px;
+}
+
+.posterName {
+    margin-bottom: 0;
+}
+
+.postTime {
+    color: gray;
+    font-size: 10px;
+}
+
+.profileImg {
+    width: 50px;
+    height: 50px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.postedImage {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.postDescription {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.post {
+    flex: 1;
+    margin: 10px 20px;
+    padding-left: 20px;
+    display: flex;
+}
+
+.reactions {
+    background-color: rgba(163, 163, 163, 0.466);
+    border-radius: 10px;
+    position: absolute;
+    margin-top: -50px;
+    width: 100%;
+    max-width: 600px;
+    display: none;
+}
+
+.thumb {
+    cursor: pointer;
+}
+
+.thumb:hover+.reactions,
+.reactions:hover {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: 1s ease-in-out;
+    -webkit-animation: reactions 0.9s both;
+    animation: reactions 0.9s both;
+}
+
+@-webkit-keyframes reactions {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes reactions {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.reactions>button {
+    border: transparent;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.reactions>button:hover {
+    background-color: rgba(128, 128, 128, 0.692);
+    border-radius: 10px;
+}
+
+
+@media only screen and (max-width : 1024px) {
+    .wrapper {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .contentContainer {
+        flex: 1;
+    }
+
+    .postForm {
+        flex-direction: row;
+    }
+
+    .reactions {
+        margin-left: 230px;
+        margin-top: -40px;
+    }
+
+    .reactions>button {
+        font-size: 20px;
+        ;
+    }
+
+}

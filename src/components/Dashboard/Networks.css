@@ -1,0 +1,72 @@
+.networksContainer{
+    background-color:#F4F2EE;
+    margin-top: 70px;
+    height: 100vh;
+    padding-top: 20px;
+}
+
+.network{
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.networksHeader{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+    padding: 0 20px;
+}
+
+.networksBody{
+    display: flex;
+    flex-direction: column;
+}
+
+.networksInner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.networksIcon{
+    flex: .2;
+}
+.networksDescription{
+    flex: .4;
+    display: flex;
+    flex-direction: column;
+}
+
+.networksButton{
+    flex: .2;
+    display: flex;
+    justify-content: center;
+}
+
+.networksOption{
+    flex: .2;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.networksIcon > img{
+    width: 80px;
+    height: 80px;
+    border: 2px solid gray;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+
+
+

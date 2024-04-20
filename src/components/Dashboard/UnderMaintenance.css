@@ -1,0 +1,30 @@
+body {
+    background-color: #F5F5F3;
+    font-family: 'Roboto';
+
+}
+
+.maintenanceContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.imageContainer>img {
+    width: 100%;
+    max-width: 900px;
+}
+
+.textContainer {
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+
+.textContainer>h1 {
+    font-size: 4rem;
+}

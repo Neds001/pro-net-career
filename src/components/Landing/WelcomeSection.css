@@ -1,0 +1,150 @@
+.welcomeSection {
+    background: #bababa;
+    background: -webkit-linear-gradient(299deg, #bababa 0%, #6278e7 100%);
+    background: linear-gradient(299deg, #bababa 0%, #6278e7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    padding: 60px 0;
+
+}
+
+.welcomeContainer {
+    width: 500px;
+    text-align: center;
+    color: white;
+    -webkit-animation: welcomeContainer 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: welcomeContainer 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes welcomeContainer {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes welcomeContainer {
+    0% {
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+.welcome {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.connect {
+    font-size: 16px;
+}
+
+.learnMore {
+    padding: 0.8em 1.8em;
+    border: 2px solid #fff;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: white;
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.learnMore::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #CDE9EC;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.learnMore:hover::before {
+    width: 105%;
+}
+
+.learnMore:hover {
+    color: #111;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .welcome {
+        font-size: 45px;
+    }
+
+    .learnMore {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .welcome {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .welcome {
+        font-size: 50px;
+    }
+
+    .connect {
+        font-size: 18px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10;
+    }
+
+    .learnMore {
+        margin-right: 20px;
+        padding: 0.6em 1.6em;
+    }
+
+    .signUp,
+    .learnBtn {
+        font-size: 18px;
+    }
+}

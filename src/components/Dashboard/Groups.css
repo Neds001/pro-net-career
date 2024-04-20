@@ -1,0 +1,115 @@
+.groupsContainer{
+    margin-top: 70px;
+    background-color: #F4F2EE;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.leftSection{
+    margin: 20px;
+    flex: .6;
+    background-color: white;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    padding: 10px;
+}
+
+.leftHeader{
+    display: flex;
+}
+
+.leftHeader > h6{
+    margin-right: 20px;
+}
+
+.leftHeader > h6:hover{
+    cursor: pointer;
+    border-bottom: 2px solid rgb(80, 166, 223);
+}
+
+.rightHeader{
+    display: flex;
+    align-items: center;
+}
+
+.createBtn{
+    font-size: 18px;
+}
+
+.groupContent{
+    display: flex;
+    flex-direction: column;
+}
+
+.groupFlex{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.groupFlex:hover{
+    background-color: rgba(128, 128, 128, 0.329);
+    cursor: pointer;
+}
+
+.groupContentIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.groupContentIcon > img {
+    width: 60px;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.groupContentDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.title{
+    margin-bottom: -1px;
+}
+.members{
+    color: gray;
+    font-size: 12px;
+    margin: 0;
+}
+
+.rightSection{
+    margin: 20px;
+    flex: .2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.groupContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.joinFlex{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid gray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+
+
