@@ -157,7 +157,7 @@
 .reactions {
     border-radius: 10px;
     position: absolute;
-    margin-top: -70px;
+    margin-top: -40px;
     width: 100%;
     max-width: 600px;
     display: flex;
