@@ -16,6 +16,7 @@ import Face4Icon from '@mui/icons-material/Face4';
 import Face5Icon from '@mui/icons-material/Face5';
 import Face6Icon from '@mui/icons-material/Face6';
 import DoneAllIcon from '@mui/icons-material/DoneAll';
+import { Link } from 'react-router-dom';
 
 
 function Profile() {
@@ -64,10 +65,10 @@ function Profile() {
                         <button>More</button>
                     </div>
                     <div className="sideBarButtons">
-                        <button>My Networks</button>
-                        <button>My Groups</button>
-                        <button>Saved</button>
-                        <button>Events</button>
+                        <Link to='/networks'><button>My Networks</button></Link>
+                        <Link to='/groups'><button>My Groups</button></Link>
+                        <Link to='/maintenance'><button>Saved</button></Link>
+                        <Link to='/maintenance'><button>Events</button></Link>
                     </div>
                     <div className="aboutContainer">
                         <div className="aboutHeader">
