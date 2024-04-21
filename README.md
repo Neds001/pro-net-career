@@ -1,6 +1,17 @@
 # pro-net-career
 ## Description
-Professional Network Career or ProNetCareer is a reinvented front-end design of a well-known website, LinkedIn. ProNetCareer doesn’t have backend database to save datas but rather used local storage to simulate some of the data inputted. 
+Professional Network Career or ProNetCareer is a reinvented front-end design of a well-known website, LinkedIn. ProNetCareer doesn’t have backend database to save datas but rather used local storage to simulate some of the data inputted.
+## Features
+- Login & Signup Page
+- User Dashboard
+- Profile
+- Content Posting
+- Post Reactions
+- Post Comments
+- Quick apply simulation
+- Local Storage for data
+- Interactive 3D model
+- Responsiveness
 ## Instructions
 - After cloning the repository, open it on any code editor you have but I preffer using Visual Studo Code.
 - Once you already have on the specic folder directory install the dependencies of the website by entering
