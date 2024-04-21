@@ -43,8 +43,7 @@ function DashboardHeader() {
                 <Link to="/dashboard" className='homeColor'>
                     <HomeIcon fontSize='large' className='home' onClick={scrollToTop} />
                 </Link>
-                {/* to='/findNetworks' */}
-                <Link className='linkNetwork' >
+                <Link className='linkNetwork' to='/findNetworks' >
                     <PeopleAltIcon fontSize='large' />
                 </Link>
                 {/* to='/findJobs' */}

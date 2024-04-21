@@ -15,6 +15,7 @@ import UnderMaintenance from './components/Dashboard/UnderMaintenance';
 import Groups from './components/Dashboard/Groups';
 import Networks from './components/Dashboard/Networks';
 import Profile from './components/Dashboard/Profile';
+import FindNetworks from './components/Dashboard/FindNetworks';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/groups" element={<Groups />} />
           <Route path="/networks" element={<Networks />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/findNetworks" element={<FindNetworks />} />
           {/* Route with Header */}
           <Route path="/*" element={<WithHeader />} />
         </Routes>
