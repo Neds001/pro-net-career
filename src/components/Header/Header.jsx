@@ -1,6 +1,6 @@
-import React from 'react'
-import '../Header/Header.css'
-import Logo from '../../assets/images/logo.png'
+import React from 'react';
+import '../Header/Header.css';
+import Logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -14,7 +14,7 @@ function Header() {
                     </div>
                 </Link>
                 <div className="buttonContainer">
-                    <Link to="/login" className="btn loginBtn">Log in</Link>
+                    <Link to="/login" className="btn loginBtn">Login</Link>
                 </div>
             </header>
         </>

@@ -1,6 +1,6 @@
-import React from 'react'
-import './SideBar.css'
-import Person from '../../assets/images/img.jpg'
+import React from 'react';
+import './SideBar.css';
+import Person from '../../assets/images/img.jpg';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import GroupsIcon from '@mui/icons-material/Groups';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 function SideBar() {
 
-    //Retrieve full name from local storage
     const fullName = localStorage.getItem('fullName');
 
     return (
@@ -46,11 +45,8 @@ function SideBar() {
                     </div>
                 </Link>
             </div>
-            <div className="lowerContainer">
-
-            </div>
         </div>
     )
 }
 
-export default SideBar
+export default SideBar;

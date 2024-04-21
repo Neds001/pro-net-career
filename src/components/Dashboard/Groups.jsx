@@ -1,12 +1,12 @@
-import React from 'react'
-import './Groups.css'
+import React from 'react';
+import './Groups.css';
 import DashboardHeader from './DashboardHeader';
-import WebIcon from '../../assets/images/web.jpg'
-import DataSci from '../../assets/images/data.jpg'
-import AI from '../../assets/images/ai.jpg'
-import Intern from '../../assets/images/internship.jpg'
-import Marketing from '../../assets/images/marketing.jpg'
-import Native from '../../assets/images/native.jpg'
+import WebIcon from '../../assets/images/web.jpg';
+import DataSci from '../../assets/images/data.jpg';
+import AI from '../../assets/images/ai.jpg';
+import Intern from '../../assets/images/internship.jpg';
+import Marketing from '../../assets/images/marketing.jpg';
+import Native from '../../assets/images/native.jpg';
 
 function Groups() {
     return (
@@ -94,4 +94,4 @@ function Groups() {
     )
 }
 
-export default Groups
+export default Groups;

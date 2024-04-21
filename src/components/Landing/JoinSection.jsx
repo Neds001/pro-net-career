@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Footer from '../Footer/Footer';
 
 function JoinSection() {
+    
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -24,40 +25,40 @@ function JoinSection() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const errors = {};
-    
+
         // Full Name validation
         if (!fullName.trim()) {
             errors.fullName = 'Full Name is required';
         } else if (!/^[a-zA-Z ]+$/.test(fullName)) {
             errors.fullName = 'Full Name should not contain numbers or special characters';
         }
-    
+
         // Email validation
         if (!email.trim()) {
             errors.email = 'Email is required';
         } else if (!/\S+@\S+\.\S+/.test(email)) {
             errors.email = 'Email is invalid';
         }
-    
+
         // Password validation
         if (!password.trim()) {
             errors.password = 'Password is required';
         } else if (password.length < 8) {
             errors.password = 'Password should be at least 8 characters long';
         }
-    
+
         if (Object.keys(errors).length === 0) {
             // Submit the form if there are no errors
             console.log('Form submitted successfully');
-            
+
             // Store credentials in local storage
             localStorage.setItem('fullName', fullName);
             localStorage.setItem('email', email);
             localStorage.setItem('password', password);
-            
+
             // Display success message
             alert('Registered successfully!');
-    
+
             // Reset form fields
             setFullName('');
             setEmail('');
@@ -66,7 +67,7 @@ function JoinSection() {
             setErrors(errors);
         }
     };
-    
+
 
     return (
         <>
@@ -114,7 +115,7 @@ function JoinSection() {
                     <p className='create'>Already have an account? Login <Link to='/login'>here.</Link></p>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }

@@ -1,4 +1,4 @@
-.groupsContainer{
+.groupsContainer {
     margin-top: 70px;
     background-color: #F4F2EE;
     display: flex;
@@ -6,7 +6,7 @@
     flex: 1;
 }
 
-.leftSection{
+.leftSection {
     margin: 20px;
     flex: .6;
     background-color: white;
@@ -14,7 +14,7 @@
     border-radius: 10px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,72 +22,74 @@
     padding: 10px;
 }
 
-.leftHeader{
+.leftHeader {
     display: flex;
 }
 
-.leftHeader > h6{
+.leftHeader>h6 {
     margin-right: 20px;
 }
 
-.leftHeader > h6:hover{
+.leftHeader>h6:hover {
     cursor: pointer;
     border-bottom: 2px solid rgb(80, 166, 223);
 }
 
-.rightHeader{
+.rightHeader {
     display: flex;
     align-items: center;
 }
 
-.createBtn{
+.createBtn {
     font-size: 18px;
 }
 
-.groupContent{
+.groupContent {
     display: flex;
     flex-direction: column;
 }
 
-.groupFlex{
+.groupFlex {
     display: flex;
     margin-bottom: 10px;
 }
 
-.groupFlex:hover{
+.groupFlex:hover {
     background-color: rgba(128, 128, 128, 0.329);
     cursor: pointer;
 }
 
-.groupContentIcon{
+.groupContentIcon {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
 }
 
-.groupContentIcon > img {
+.groupContentIcon>img {
     width: 60px;
     border: 2px solid gray;
     border-radius: 10px;
 }
 
-.groupContentDescription{
+.groupContentDescription {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
 }
-.title{
+
+.title {
     margin-bottom: -1px;
 }
-.members{
+
+.members {
     color: gray;
     font-size: 12px;
     margin: 0;
 }
 
-.rightSection{
+.rightSection {
     margin: 20px;
     flex: .2;
     background-color: white;
@@ -98,12 +100,12 @@
     border-radius: 10px;
 }
 
-.groupContainer{
+.groupContainer {
     display: flex;
     flex-direction: column;
 }
 
-.joinFlex{
+.joinFlex {
     display: flex;
     flex-direction: row;
     border-bottom: 2px solid gray;
@@ -113,22 +115,21 @@
 
 
 @media only screen and (max-width: 1024px) {
-    .groupsContainer{
+    .groupsContainer {
         justify-content: space-evenly;
     }
 
-    .rightSection{
+    .rightSection {
         flex: .3;
     }
-    .leftSection{
+
+    .leftSection {
         flex: .7
     }
 }
 
-@media only screen and (max-width: 480px){
-    .groupsContainer{
+@media only screen and (max-width: 480px) {
+    .groupsContainer {
         flex-direction: column;
     }
 }
-
-

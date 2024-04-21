@@ -1,11 +1,11 @@
-.networksContainer{
-    background-color:#F4F2EE;
+.networksContainer {
+    background-color: #F4F2EE;
     margin-top: 70px;
     height: 100vh;
     padding-top: 20px;
 }
 
-.network{
+.network {
     margin: 0 auto;
     background-color: white;
     border-radius: 10px;
@@ -13,7 +13,7 @@
     max-width: 800px;
 }
 
-.networksHeader{
+.networksHeader {
     display: flex;
     flex: 1;
     align-items: center;
@@ -22,42 +22,41 @@
     padding: 0 20px;
 }
 
-.networksBody{
+.networksBody {
     display: flex;
     flex-direction: column;
 }
 
-.networksInner{
+.networksInner {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 20px;
 }
 
-.networksIcon{
+.networksIcon {
     flex: .2;
 }
-.networksDescription{
+
+.networksDescription {
     flex: .4;
     display: flex;
     flex-direction: column;
 }
 
-.networksButton{
+.networksButton {
     flex: .2;
     display: flex;
     justify-content: center;
 }
 
-.networksOption{
+.networksOption {
     flex: .2;
     display: flex;
     justify-content: center;
 }
 
-
-
-.networksIcon > img{
+.networksIcon>img {
     width: 80px;
     height: 80px;
     border: 2px solid gray;
@@ -65,13 +64,9 @@
     object-fit: cover;
 }
 
-@media only screen and (max-width: 480px){
-    .networksHeader{
+@media only screen and (max-width: 480px) {
+    .networksHeader {
         flex-direction: column;
         padding-bottom: 20px;
     }
 }
-
-
-
-

@@ -29,28 +29,36 @@
     margin: 0 20px 10px 20px;
 }
 
-.networks > h5{
+.profile>h4:hover,
+.networks>h5:hover,
+.groups>h5:hover,
+.saved>h5:hover,
+.event>h5:hover {
+    font-weight: bold;
+}
+
+.networks>h5 {
     margin-right: 35px;
     font-weight: 400;
-    color: black;
 }
 
-.groups > h5 {
+.groups>h5 {
     margin-right: 55px;
     font-weight: 400;
-    color: black;
 }
 
-.saved > h5, .event > h5{
+.saved>h5,
+.event>h5 {
     margin-right: 100px;
     font-weight: 400;
-    color: black;
-}
-.save{
-    text-decoration: none;
 }
 
-.event > h5{
+.save {
+    text-decoration: none;
+    color: black;
+}
+
+.event>h5 {
     margin-right: 100px;
     font-weight: 400;
 }
@@ -60,8 +68,9 @@
 .groups:hover,
 .saved:hover,
 .event:hover {
-    background-color: gray;
-    border-radius: 20px;
+    background-color: rgba(128, 128, 128, 0.397);
+    border-radius: 10px;
+    transition: .3s ease-in-out;
 }
 
 .person {
@@ -73,11 +82,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .profile{
+    .profile {
         flex-direction: column;
         margin-bottom: 40px;
     }
-    .event{
+
+    .event {
         gap: 20px;
     }
 }
@@ -96,6 +106,10 @@
 
     .profile {
         margin-bottom: 40px;
+    }
+
+    .profile>h4 {
+        color: black;
     }
 
     .profile,

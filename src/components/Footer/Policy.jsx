@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Header from '../Header/Header';
 
 function Policy() {
@@ -4216,4 +4216,4 @@ function Policy() {
     )
 }
 
-export default Policy
+export default Policy;

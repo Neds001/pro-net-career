@@ -35,7 +35,7 @@
     transition: opacity .5s ease-in-out, transform .5s ease-in-out;
     border: 5px solid #dddddd;
     -webkit-box-shadow: 8px 0.5px 20.5px 2px #dddddd;
-            box-shadow: 8px 0.5px 20.5px 2px #dddddd;
+    box-shadow: 8px 0.5px 20.5px 2px #dddddd;
 }
 
 .careerContainer:hover .careerImg {

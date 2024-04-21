@@ -1,6 +1,6 @@
-import React from 'react'
-import DashboardHeader from './DashboardHeader'
-import './FindNetworks.css'
+import React from 'react';
+import DashboardHeader from './DashboardHeader';
+import './FindNetworks.css';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 function FindNetworks() {
@@ -141,4 +141,4 @@ function FindNetworks() {
     )
 }
 
-export default FindNetworks
+export default FindNetworks;

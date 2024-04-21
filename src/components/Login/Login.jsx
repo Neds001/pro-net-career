@@ -68,7 +68,7 @@ function Login() {
                             className="logInInput"
                             id='password'
                         />
-                        <button type="submit" className='btn logInBtn'>Log in</button>
+                        <button type="submit" className='btn logInBtn'>Let's go!</button>
                     </form>
                     <Link to='/forgotPass' className='forgotPass'><p>Forgot Password?</p></Link>
                     <p className='register'>No account yet? register <Link to='/signup'>here.</Link></p>
@@ -103,7 +103,7 @@ function Login() {
                     </Carousel>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }

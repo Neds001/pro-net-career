@@ -1,3 +1,27 @@
-body{
-    background-color: white;
+.comments {
+    border: 2px solid gray;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
+
+.commentArea {
+    padding: 5px;
+    width: 100%;
+}
+
+.commentName {
+    font-size: 18px;
+}
+
+.commentDate {
+    font-size: 12px;
+    color: gray;
+}
+
+.commentContent {
+    border-bottom: 1px solid gray;
+    padding: 5px;
+}
+
+@media only screen and (max-width: 435px) {}

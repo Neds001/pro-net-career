@@ -16,7 +16,9 @@ import Groups from './components/Dashboard/Groups';
 import Networks from './components/Dashboard/Networks';
 import Profile from './components/Dashboard/Profile';
 import FindNetworks from './components/Dashboard/FindNetworks';
-
+import FindJobs from './components/Dashboard/FindJobs';
+import Messages from './components/Dashboard/Msg';
+import Notifications from './components/Dashboard/Notif';
 function App() {
   return (
     <>
@@ -34,6 +36,9 @@ function App() {
           <Route path="/networks" element={<Networks />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/findNetworks" element={<FindNetworks />} />
+          <Route path="/findJobs" element={<FindJobs />} />
+          <Route path="/messages" element={<Messages />} />
+          <Route path="/notifications" element={<Notifications />} />
           {/* Route with Header */}
           <Route path="/*" element={<WithHeader />} />
         </Routes>

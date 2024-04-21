@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 import DashboardHeader from './DashboardHeader';
-import '../Dashboard/Networks.css'
+import '../Dashboard/Networks.css';
 import PersonSearchIcon from '@mui/icons-material/PersonSearch';
-import Icon1 from '../../assets/images/img.jpg'
+import Icon1 from '../../assets/images/img.jpg';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 function Networks() {
     return (
@@ -28,7 +28,7 @@ function Networks() {
                                 <p className="members">Connected 2 months ago</p>
                             </div>
                             <div className="networksButton">
-                            <button>Message</button>
+                                <button>Message</button>
                             </div>
                             <div className="networksOption">
                                 <MoreHorizIcon />
@@ -44,7 +44,7 @@ function Networks() {
                                 <p className="members">Connected 2 days ago</p>
                             </div>
                             <div className="networksButton">
-                            <button>Message</button>
+                                <button>Message</button>
                             </div>
                             <div className="networksOption">
                                 <MoreHorizIcon />
@@ -60,7 +60,7 @@ function Networks() {
                                 <p className="members">Connected 8 months ago</p>
                             </div>
                             <div className="networksButton">
-                            <button>Message</button>
+                                <button>Message</button>
                             </div>
                             <div className="networksOption">
                                 <MoreHorizIcon />
@@ -73,4 +73,4 @@ function Networks() {
     )
 }
 
-export default Networks
+export default Networks;

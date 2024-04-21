@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
 import DashboardHeader from './DashboardHeader';
-import './Profile.css'
-import Cover from '../../assets/images/bg.jpg'
-import Person from '../../assets/images/img.jpg'
+import './Profile.css';
+import Cover from '../../assets/images/bg.jpg';
+import Person from '../../assets/images/img.jpg';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import PeopleIcon from '@mui/icons-material/People';
@@ -15,10 +15,33 @@ import Face3Icon from '@mui/icons-material/Face3';
 import Face4Icon from '@mui/icons-material/Face4';
 import Face5Icon from '@mui/icons-material/Face5';
 import Face6Icon from '@mui/icons-material/Face6';
+import DoneAllIcon from '@mui/icons-material/DoneAll';
+
 
 function Profile() {
-    //Retrieve full name from local storage
     const fullName = localStorage.getItem('fullName');
+
+    const [requested, setRequested] = useState(false);
+
+    const [newBioText, setNewBioText] = useState('');
+
+    const [bioText, setBioText] = useState('Trainee at Village 88, Inc Philippines');
+
+    // Function to handle connection request button click
+    const handleConnect = () => {
+        setRequested(true);
+    };
+
+    // Function to handle input change in the edit bio input field
+    const handleInputChange = (event) => {
+        setNewBioText(event.target.value);
+    };
+
+    // Function to handle editing the bio text
+    const handleEditBio = () => {
+        setBioText(newBioText);
+        setNewBioText(''); // Clear the input field after updating the bio
+    };
 
     return (
         <>
@@ -31,14 +54,20 @@ function Profile() {
                     <div className="profileArea">
                         <img src={Person} alt="profile" />
                         <h1>{fullName}<span className='span'>(He/Him)</span></h1>
-                        <p>Trainee at Village 88, Inc Philippines</p>
-                        <p>Baguio City, Cordillera Admin Region, Philippines </p>
+                        <p className='bio'>{bioText}</p>
+                        <p>Baguio City, Cordillera Admin Region, Philippines</p>
                         <p>10 connections</p>
                     </div>
                     <div className="profileAreaButtons">
                         <button><PersonAddIcon />Connect</button>
                         <button>Message</button>
                         <button>More</button>
+                    </div>
+                    <div className="sideBarButtons">
+                        <button>My Networks</button>
+                        <button>My Groups</button>
+                        <button>Saved</button>
+                        <button>Events</button>
                     </div>
                     <div className="aboutContainer">
                         <div className="aboutHeader">
@@ -86,9 +115,10 @@ function Profile() {
                     <div className="upperSection">
                         <div className="editBio">
                             <h5>Edit Bio</h5>
-                            <EditIcon />
+                            <button className='editBtn' onClick={handleEditBio}><EditIcon /></button>
                         </div>
-                        <p>Trainee at Village 88, Inc Philippines</p>
+                        <input type="text" value={newBioText} onChange={handleInputChange} />
+                        <p>{bioText}</p>
                     </div>
                     <div className="lowerSection">
                         <div className="lowerSectionHeader">
@@ -103,7 +133,15 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Andress Bonifacio</h6>
                                     <p>Systems Engineer</p>
-                                    <button>Connect</button>
+                                    {!requested ? (
+                                        <button onClick={handleConnect}>
+                                            <PersonAddIcon /> Connect
+                                        </button>
+                                    ) : (
+                                        <button disabled>
+                                            <DoneAllIcon /> Requested
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                             <div className="lowerSectionFlex">
@@ -113,7 +151,7 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Javie Flores</h6>
                                     <p>Associate DevOps Engineer</p>
-                                    <button>Connect</button>
+                                    <button><PersonAddIcon /> Connect</button>
                                 </div>
                             </div>
                             <div className="lowerSectionFlex">
@@ -123,7 +161,7 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Eloisa Joy Villanueva</h6>
                                     <p>Technology Officer</p>
-                                    <button>Connect</button>
+                                    <button><PersonAddIcon /> Connect</button>
                                 </div>
                             </div>
                             <div className="lowerSectionFlex">
@@ -133,7 +171,7 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Antoinette Marcos</h6>
                                     <p>Data Analyst</p>
-                                    <button>Connect</button>
+                                    <button><PersonAddIcon /> Connect</button>
                                 </div>
                             </div>
                             <div className="lowerSectionFlex">
@@ -143,7 +181,7 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Jose Manaloto</h6>
                                     <p>CEO</p>
-                                    <button>Connect</button>
+                                    <button><PersonAddIcon /> Connect</button>
                                 </div>
                             </div>
                             <div className="lowerSectionFlex">
@@ -153,7 +191,7 @@ function Profile() {
                                 <div className="peopleBody">
                                     <h6>Anton Manabat</h6>
                                     <p>Front-End Developer</p>
-                                    <button>Connect</button>
+                                    <button><PersonAddIcon /> Connect</button>
                                 </div>
                             </div>
                         </div>
@@ -164,4 +202,4 @@ function Profile() {
     )
 }
 
-export default Profile
+export default Profile;

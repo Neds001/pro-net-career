@@ -4,8 +4,8 @@ import Modal from 'react-bootstrap/Modal';
 function UploadPhotoModal({ show, onHide, image, handleImageChange, handleImagePostSubmit }) {
 
     const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent the default form submission behavior
-        handleImagePostSubmit(); // Call the handleImagePostSubmit function
+        e.preventDefault(); 
+        handleImagePostSubmit();
     };
 
     return (

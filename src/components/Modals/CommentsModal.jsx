@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import './CommentsModal.css';
 
 function CommentsModal({ show, onHide, postId }) {
     const [comments, setComments] = useState([]);
@@ -36,15 +37,17 @@ function CommentsModal({ show, onHide, postId }) {
                     {/* Render existing comments */}
                     {comments.map((comment, index) => (
                         <div key={index}>
-                            <p>{comment.fullName} - {comment.date}</p>
-                            <p>{comment.content}</p>
+                            <p className='commentName'>{comment.fullName} - <span className='commentDate'>{comment.date}</span></p>
+                            <p className='commentContent'>{comment.content}</p>
                         </div>
                     ))}
                 </div>
                 {/* Textarea for new comment */}
                 <textarea
-                    rows="4"
-                    cols="55"
+                    className='commentArea'
+                    placeholder='Write a comment...'
+                    rows={3}
+                    cols={55}
                     value={commentContent}
                     onChange={(e) => setCommentContent(e.target.value)}
                 />

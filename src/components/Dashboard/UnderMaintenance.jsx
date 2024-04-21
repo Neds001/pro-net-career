@@ -1,7 +1,7 @@
-import React from 'react'
-import '../../components/Dashboard/UnderMaintenance.css'
-import Image from '../../assets/images/maintenance.jpg'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import '../../components/Dashboard/UnderMaintenance.css';
+import Image from '../../assets/images/maintenance.jpg';
+import { Link } from 'react-router-dom';
 
 function UnderMaintenance() {
     return (
@@ -18,4 +18,4 @@ function UnderMaintenance() {
     )
 }
 
-export default UnderMaintenance
+export default UnderMaintenance;

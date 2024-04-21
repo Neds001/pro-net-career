@@ -1,18 +1,20 @@
-import React from 'react'
-import { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import Header from '../Header/Header'
-import Career1 from '../../assets/images/it-career.jpeg'
-import Career2 from '../../assets/images/engr-career.webp'
-import Career3 from '../../assets/images/nursing-career.webp'
-import Career4 from '../../assets/images/archi-career.webp'
-import Career5 from '../../assets/images/business-career.webp'
-import '../../components/Landing/Careers.css'
-import Footer from '../Footer/Footer'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Header from '../Header/Header';
+import Career1 from '../../assets/images/it-career.jpeg';
+import Career2 from '../../assets/images/engr-career.webp';
+import Career3 from '../../assets/images/nursing-career.webp';
+import Career4 from '../../assets/images/archi-career.webp';
+import Career5 from '../../assets/images/business-career.webp';
+import '../../components/Landing/Careers.css';
+import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 
 function Careers() {
+
+    // Initialize AOS animation library
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
@@ -27,9 +29,9 @@ function Careers() {
                         <img src={Career1} alt="career1" className='careerImg' />
                         <Link
                             to="https://www.techopedia.com/definition/626/information-technology-it"
-                            className='imgButton' 
+                            className='imgButton'
                             target='_blank'>
-                                Learn More
+                            Learn More
                         </Link>
                     </div>
                     <div className='careerText' data-aos='fade-left'>
@@ -47,9 +49,9 @@ function Careers() {
                         <img src={Career2} alt="career2" className='careerImg' />
                         <Link
                             to="https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/engineering-industry"
-                            className='imgButton' 
+                            className='imgButton'
                             target='_blank'>
-                                Learn More
+                            Learn More
                         </Link>
                     </div>
                 </section>
@@ -58,9 +60,9 @@ function Careers() {
                         <img src={Career3} alt="career3" className='careerImg' />
                         <Link
                             to="https://www.news-medical.net/health/Nursing-Healthcare-Profession.aspx#:~:text=Nursing%20is%20a%20healthcare%20profession,and%20approach%20to%20medical%20care."
-                            className='imgButton' 
+                            className='imgButton'
                             target='_blank'>
-                                Learn More
+                            Learn More
                         </Link>
                     </div>
                     <div className='careerText' data-aos='fade-left'>
@@ -77,9 +79,9 @@ function Careers() {
                         <img src={Career4} alt="career4" className='careerImg' />
                         <Link
                             to="https://www.igi-global.com/dictionary/building-information-modeling-australian-architecture/1428"
-                            className='imgButton' 
+                            className='imgButton'
                             target='_blank'>
-                                Learn More
+                            Learn More
                         </Link>
                     </div>
                 </section>
@@ -88,9 +90,9 @@ function Careers() {
                         <img src={Career5} alt="career5" className='careerImg' />
                         <Link
                             to="https://www.investopedia.com/terms/i/industry.asp"
-                            className='imgButton' 
+                            className='imgButton'
                             target='_blank'>
-                                Learn More
+                            Learn More
                         </Link>
                     </div>
                     <div className='careerText' data-aos='fade-left'>
@@ -98,11 +100,10 @@ function Careers() {
                         <p className='careerDescription'>An industry is a group of companies that are related based on their primary business activities. In modern economies, there are dozens of industry classifications. Industry classifications are typically grouped into larger categories called sectors.</p>
                     </div>
                 </section>
-                <hr />
             </div>
             <Footer />
         </>
     )
 }
 
-export default Careers
+export default Careers;

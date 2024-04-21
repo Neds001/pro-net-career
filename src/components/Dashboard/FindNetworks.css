@@ -14,12 +14,12 @@
 
 .connectBtn {
     position: absolute;
-    top: 50%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
+    top: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%);
     background-color: green;
-    width: 100%; /* Adjust width as needed */
-    height: 100%; /* Adjust height as needed */
+    width: 100%; 
+    height: 100%; 
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.664);
     border: 0;

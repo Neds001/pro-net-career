@@ -4,18 +4,20 @@ import PushPinIcon from '@mui/icons-material/PushPin';
 import IBM from '../../assets/images/ibm.jpg';
 import WFH from '../../assets/images/wfh.jpg';
 import WFHF from '../../assets/images/wfhf.jpg';
-import AI from '../../assets/images/ai.jpg'
-import Intern from '../../assets/images/internship.jpg'
-import Marketing from '../../assets/images/marketing.jpg'
-import Native from '../../assets/images/native.jpg'
+import AI from '../../assets/images/ai.jpg';
+import Intern from '../../assets/images/internship.jpg';
+import Marketing from '../../assets/images/marketing.jpg';
+import Native from '../../assets/images/native.jpg';
 
 function RightSection() {
+    
     const [followed, setFollowed] = useState({
         ibm: false,
         wfh: false,
         wfhf: false
     });
 
+    // handle follow function for each company
     const handleFollow = (company) => {
         setFollowed(prevState => ({
             ...prevState,

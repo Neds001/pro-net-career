@@ -1,9 +1,9 @@
-import React, { Suspense, lazy } from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Environment, OrbitControls, ContactShadows} from '@react-three/drei'
-import Earth from '../../../public/Earth'
-import '../../components/Landing/DiscoverSection.css'
-import { Link } from 'react-router-dom'
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { Environment, OrbitControls, ContactShadows} from '@react-three/drei';
+import Earth from '../../../public/Earth';
+import '../../components/Landing/DiscoverSection.css';
+import { Link } from 'react-router-dom';
 
 
 function DiscoverSection() {
@@ -16,6 +16,7 @@ function DiscoverSection() {
                     <Link to='/explore'><button className='btn'>Explore</button></Link>
                 </div>
                 <div className='threeContainer'>
+                    {/* Display 3D earch from @react-three/drei library */}
                     <Canvas>
                         <ambientLight intensity={1}/>
                         <OrbitControls enableZoom={false}/>
@@ -27,7 +28,6 @@ function DiscoverSection() {
                     </Canvas>
                 </div>
             </section>
-            <hr/>
         </>
     )
 }

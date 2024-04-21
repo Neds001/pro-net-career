@@ -16,40 +16,50 @@ import CommentIcon from '@mui/icons-material/Comment';
 import ApprovalIcon from '@mui/icons-material/Approval';
 import { Link } from 'react-router-dom';
 
+
 function ContentSection() {
-    const [posts, setPosts] = useState([]);
-    const [showModal, setShowModal] = useState(false);
-    const [image, setImage] = useState(null);
-    const [postContent, setPostContent] = useState('');
-    const [reactions, setReactions] = useState({});
-    const [selectedPostId, setSelectedPostId] = useState(null);
-    const [showQuickApplyModal, setShowQuickApplyModal] = useState(false);
-    // Retrieve full name from local storage
+
     const fullName = localStorage.getItem('fullName');
+
+    const [posts, setPosts] = useState([]);
+
+    const [showModal, setShowModal] = useState(false);
+
+    const [image, setImage] = useState(null);
+
+    const [postContent, setPostContent] = useState('');
+
+    const [reactions, setReactions] = useState({});
+
+    const [selectedPostId, setSelectedPostId] = useState(null);
+
+    const [showQuickApplyModal, setShowQuickApplyModal] = useState(false);
 
     const [showCommentsModal, setShowCommentsModal] = useState(false);
 
+    // Function to handle comments modal show/hide
     const handleShowCommentsModal = (postId) => {
         setSelectedPostId(postId);
         setShowCommentsModal(true);
     };
-
     const handleCloseCommentsModal = () => {
         setShowCommentsModal(false);
     };
 
+    // Function to handle quick apply modal show/hide
     const handleShowQuickApplyModal = () => {
         setShowQuickApplyModal(true);
     };
-
     const handleCloseQuickApplyModal = () => {
         setShowQuickApplyModal(false);
     };
 
+    //duration of animation of showing contents
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
+    // Retrieve posts and reactions from local storage
     useEffect(() => {
         const storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
         if (storedPosts) {
@@ -59,6 +69,35 @@ function ContentSection() {
         }
     }, []);
 
+    // Function to handle text post submission
+    const handleTextPostSubmit = (e) => {
+        e.preventDefault();
+        if (postContent.trim() !== '') {
+            const newPost = { content: postContent, time: new Date(), image: null };
+            const updatedPosts = [...posts, newPost];
+            setPosts(updatedPosts);
+            const updatedReactions = { ...reactions, [updatedPosts.length - 1]: {} };
+            setReactions(updatedReactions);
+            localStorage.setItem('posts', JSON.stringify(updatedPosts));
+            localStorage.setItem('reactions', JSON.stringify(updatedReactions));
+            setPostContent('');
+        }
+    };
+
+    // Function to handle image change
+    const handleImageChange = (e) => {
+        setImage(e.target.files[0]);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleShowModal = () => {
+        setShowModal(true);
+    };
+
+    // Function to handle image post submission
     const handleImagePostSubmit = () => {
         if (image) {
             const reader = new FileReader();
@@ -79,33 +118,7 @@ function ContentSection() {
         }
     };
 
-    const handleTextPostSubmit = (e) => {
-        e.preventDefault();
-        if (postContent.trim() !== '') {
-            const newPost = { content: postContent, time: new Date(), image: null };
-            const updatedPosts = [...posts, newPost];
-            setPosts(updatedPosts);
-            const updatedReactions = { ...reactions, [updatedPosts.length - 1]: {} };
-            setReactions(updatedReactions);
-            localStorage.setItem('posts', JSON.stringify(updatedPosts));
-            localStorage.setItem('reactions', JSON.stringify(updatedReactions));
-            setPostContent('');
-        }
-    };
-
-
-    const handleImageChange = (e) => {
-        setImage(e.target.files[0]);
-    };
-
-    const handleCloseModal = () => {
-        setShowModal(false);
-    };
-
-    const handleShowModal = () => {
-        setShowModal(true);
-    };
-
+    // Function to handle reaction
     const handleReact = (postIndex, reaction) => {
         const updatedReactions = { ...reactions };
         if (!updatedReactions[postIndex][reaction]) {
@@ -131,26 +144,26 @@ function ContentSection() {
                             <button onClick={handleShowModal}><PermMediaIcon fontSize='medium' /></button>
                             <p>Photo</p>
                         </div>
-                        <div className="actionItem">
+                        <div className="actionItem videoUpload">
                             <OndemandVideoIcon fontSize='medium' />
                             <p>Video</p>
                         </div>
-                        <div className="actionItem">
+                        <div className="actionItem eventUpload">
                             <EventAvailableIcon fontSize='medium' />
                             <p>Event</p>
                         </div>
-                        <div className="actionItem">
+                        <div className="actionItem articleUpload">
                             <ArticleIcon fontSize='medium' />
                             <p>Write Article</p>
                         </div>
                     </div>
                 </div>
                 <div className="postList">
+                    {/* Displaying post from ascending order */}
                     {posts.map((post, index) => {
                         if (!reactions[index]) {
                             setReactions(prevReactions => ({ ...prevReactions, [index]: {} }));
                         }
-
                         return (
                             <div key={index} className="postContainer" data-aos='zoom-in'>
                                 <div className="postHeader">
@@ -163,7 +176,6 @@ function ContentSection() {
                                         </Link>
                                         <p className='postTime'>Posted: {post.time && post.time.toLocaleString()}</p>
                                     </div>
-
                                 </div>
                                 <div className="postDescription">
                                     <p className='post'>{post.content}</p>
@@ -176,20 +188,32 @@ function ContentSection() {
                                             <p>Like</p>
                                         </div>
                                         <div className="reactions">
-                                            <button onClick={() => handleReact(index, 'like')} className='like'>👍 {reactions[index]?.like ? `(${reactions[index].like})` : ''}</button>
-                                            <button onClick={() => handleReact(index, 'heart')} className='heart'>💓 {reactions[index]?.heart ? `(${reactions[index].heart})` : ''}</button>
-                                            <button onClick={() => handleReact(index, 'laugh')} className='laugh'>😂 {reactions[index]?.laugh ? `(${reactions[index].laugh})` : ''}</button>
-                                            <button onClick={() => handleReact(index, 'wow')} className='wow'>😮 {reactions[index]?.wow ? `(${reactions[index].wow})` : ''}</button>
-                                            <button onClick={() => handleReact(index, 'sad')} className='sad'>😞 {reactions[index]?.sad ? `(${reactions[index].sad})` : ''}</button>
-                                            <button onClick={() => handleReact(index, 'angry')} className='angry'>😠 {reactions[index]?.angry ? `(${reactions[index].angry})` : ''}</button>
+                                            <button onClick={() => handleReact(index, 'like')} className='like'>
+                                                👍 {reactions[index]?.like ? <span className="reactionCount">({reactions[index].like})</span> : ''}
+                                            </button>
+                                            <button onClick={() => handleReact(index, 'heart')} className='heart'>
+                                                💓 {reactions[index]?.heart ? <span className="reactionCount">({reactions[index].heart})</span> : ''}
+                                            </button>
+                                            <button onClick={() => handleReact(index, 'laugh')} className='laugh'>
+                                                😂 {reactions[index]?.laugh ? <span className="reactionCount">({reactions[index].laugh})</span> : ''}
+                                            </button>
+                                            <button onClick={() => handleReact(index, 'wow')} className='wow'>
+                                                😮 {reactions[index]?.wow ? <span className="reactionCount">({reactions[index].wow})</span> : ''}
+                                            </button>
+                                            <button onClick={() => handleReact(index, 'sad')} className='sad'>
+                                                😞 {reactions[index]?.sad ? <span className="reactionCount">({reactions[index].sad})</span> : ''}
+                                            </button>
+                                            <button onClick={() => handleReact(index, 'angry')} className='angry'>
+                                                😠 {reactions[index]?.angry ? <span className="reactionCount">({reactions[index].angry})</span> : ''}
+                                            </button>
                                         </div>
                                     </div>
-                                    <div className='actionItem'>
-                                        <CommentIcon fontSize='medium' onClick={() => handleShowCommentsModal(index)} />
+                                    <div className='actionItem' onClick={() => handleShowCommentsModal(index)}>
+                                        <CommentIcon fontSize='medium' />
                                         <p>Comment</p>
                                     </div>
-                                    <div className="actionItem" >
-                                        <ApprovalIcon fontSize='medium' onClick={handleShowQuickApplyModal} />
+                                    <div className="actionItem" onClick={handleShowQuickApplyModal} >
+                                        <ApprovalIcon fontSize='medium' />
                                         <p>Quick Apply</p>
                                     </div>
                                 </div>
@@ -198,6 +222,7 @@ function ContentSection() {
                     }).reverse()}
                 </div>
             </div>
+            {/* Modal for photo upload */}
             <UploadPhotoModal
                 show={showModal}
                 onHide={handleCloseModal}
@@ -205,7 +230,9 @@ function ContentSection() {
                 handleImageChange={handleImageChange}
                 handleImagePostSubmit={handleImagePostSubmit}
             />
+            {/* Modal for comments */}
             <CommentsModal show={showCommentsModal} onHide={handleCloseCommentsModal} postId={selectedPostId} />
+            {/* Modal for quick apply */}
             <QuickApply show={showQuickApplyModal} onHide={handleCloseQuickApplyModal} />
         </div>
     );

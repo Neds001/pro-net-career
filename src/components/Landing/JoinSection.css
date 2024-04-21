@@ -149,7 +149,8 @@ label {
     flex-direction: column;
 }
 
-.join, .create{
+.join,
+.create {
     text-align: center;
 }
 
@@ -172,7 +173,7 @@ label {
         margin: 0 20px;
     }
 
-    
-    
-    
+
+
+
 }

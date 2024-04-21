@@ -54,7 +54,7 @@ function ForgotPassword() {
                         <button type="submit" className='btn forgotBtn'>Send</button>
                     </form>
 
-                  
+
                     <Link to='/login' className='forgotPass'><p>Back</p></Link>
                 </div>
                 <div className='imagesContainer'>
@@ -85,7 +85,7 @@ function ForgotPassword() {
                     </Carousel>
                 </div>
             </section>
-            <Footer/>
+            <Footer />
         </>
     )
 }
