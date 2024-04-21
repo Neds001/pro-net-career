@@ -1,6 +1,6 @@
 # pro-net-career
 ## Description
-Professional Network Career (pro-net-career) is a reinvented front-end design of a well know website called LinkedIn.
+Professional Network Career or ProNetCareer is a reinvented front-end design of a well-known website, LinkedIn. ProNetCareer doesn’t have backend database to save datas but rather used local storage to simulate some of the data inputted. 
 ## Instructions
 - After cloning the repository, open it on any code editor you have but I preffer using Visual Studo Code.
 - Once you already have on the specic folder directory install the dependencies of the website by entering
