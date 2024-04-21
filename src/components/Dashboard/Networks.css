@@ -3,6 +3,28 @@
     margin-top: 70px;
     height: 100vh;
     padding-top: 20px;
+    -webkit-animation: networksContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: networksContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes networksContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes networksContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .network {

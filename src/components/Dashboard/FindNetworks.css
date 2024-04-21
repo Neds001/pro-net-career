@@ -3,7 +3,30 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    -webkit-animation: findNetworksContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: findNetworksContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+@-webkit-keyframes findNetworksContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes findNetworksContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .row {
     display: flex;
@@ -14,12 +37,12 @@
 
 .connectBtn {
     position: absolute;
-    top: 50%; 
-    left: 50%; 
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     background-color: green;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     backdrop-filter: blur(3px);
     background-color: rgba(255, 255, 255, 0.664);
     border: 0;

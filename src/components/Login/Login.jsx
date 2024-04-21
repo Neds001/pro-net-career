@@ -88,13 +88,13 @@ function Login() {
                                     <img src={Image2} alt="First slide" className='images' />
                                     <Carousel.Caption className='carouselCaption'>
                                         <h3 className='carouselLabel'>Let the right people know you’re open to work</h3>
-                                        <p className='carouselDescription'>With the Open To Work feature, you can privately tell recruiters or publicly share with the LinkedIn community that you are looking for new job opportunities.</p>
+                                        <p className='carouselDescription'>With the Open To Work feature, you can privately tell recruiters or publicly share with the ProNetCareer community that you are looking for new job opportunities.</p>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img src={Image3} alt="First slide" className='images' />
                                     <Carousel.Caption className='carouselCaption'>
-                                        <h3 className='carouselLabel'>Who is LinkedIn for?</h3>
+                                        <h3 className='carouselLabel'>Who is ProNetCareer for?</h3>
                                         <p className='carouselDescription'>Anyone looking to navigate their professional life.</p>
                                     </Carousel.Caption>
                                 </Carousel.Item>

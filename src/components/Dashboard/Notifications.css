@@ -4,6 +4,28 @@
     align-items: center;
     flex-direction: column;
     padding: 20px;
+    -webkit-animation: notificationsContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: notificationsContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes notificationsContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes notificationsContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .notificationsHeader {

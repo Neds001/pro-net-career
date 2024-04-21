@@ -1,12 +1,34 @@
-.findJobContainer{
+.findJobContainer {
     margin-top: 70px;
     display: flex;
     height: 100vh;
     justify-content: space-evenly;
     padding: 20px;
+    -webkit-animation: findJobContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: findJobContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
-.leftJobSection{
+@-webkit-keyframes findJobContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes findJobContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.leftJobSection {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -15,7 +37,7 @@
     height: 260px;
 }
 
-.leftJobSection > h6 {
+.leftJobSection>h6 {
     display: flex;
     align-items: start;
     justify-content: start;
@@ -23,34 +45,36 @@
     padding: 10px 20px 10px 10px;
 }
 
-.righJobSectionContainer{
+.righJobSectionContainer {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
     display: flex;
     flex-direction: column;
 }
-.rightJobSectionBody{
+
+.rightJobSectionBody {
     display: flex;
     border-bottom: 2px solid gray;
     padding: 10px;
 }
 
-.jobBody > a, .showall > a , .leftJobSection > h6 > a{
+.jobBody>a,
+.showall>a,
+.leftJobSection>h6>a {
     text-decoration: none;
     color: black;
 }
 
-.jobIcon > img{
+.jobIcon>img {
     width: 80px;
     margin: 10px;
 }
 
-.showall{
+.showall {
     display: flex;
     margin: 10px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-

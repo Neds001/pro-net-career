@@ -4,7 +4,30 @@
     display: flex;
     justify-content: space-around;
     flex: 1;
+    -webkit-animation: groupsContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: groupsContainer 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
+
+@-webkit-keyframes groupsContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes groupsContainer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .leftSection {
     margin: 20px;
